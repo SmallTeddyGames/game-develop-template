@@ -1,4 +1,4 @@
-# Web端游戏开发模板
+# 🧸 Web端游戏开发模板项目
 
 <details open>
   <summary><h2>🎮 项目介绍</h2></summary>
@@ -27,7 +27,7 @@
   
 除了上面的一些工具外，还使用了常用的 `vueuse` 工具，值得注意的是，本项目没有使用 `pinia` 来做状态管理，而是使用了 `vueuse` 中的 `useGlobalState` 方法在本地来进行统一的状态管理。
   
-### 🛠️gh-page
+### 🛠️ gh-page
   
 在项目配置方面，使用了 `gh-pages` 工具来进行项目在 `github` 上的部署，用户可以直接访问 `https://<username>.github.io/<repo-name>` 来访问项目。部署的方式也很简单：
   
