@@ -15,14 +15,16 @@ export default defineConfig({
 
             // global imports to register
             imports: [
-                // 插件预设支持导入的api
+                // vue auto import
                 'vue',
+                // vue-router auto import
                 {
                     'vue-router': [
                         'createRouter',
                         'createWebHistory'
                     ]
                 },
+                // @vueuse/core auto import
                 {
                     '@vueuse/core': [
                         'createGlobalState',
@@ -31,6 +33,7 @@ export default defineConfig({
                         'useFullscreen'
                     ]
                 },
+                // @/store auto import
                 {
                     '@/store': [
                         'useGlobalState'
@@ -40,9 +43,11 @@ export default defineConfig({
         }),
     ],
     resolve: {
+        // 别名
         alias: {
             '@': path.resolve(__dirname, 'src')
         },
+        // 忽略后缀
         extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
     },
     server: {
