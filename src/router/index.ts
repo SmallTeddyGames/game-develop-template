@@ -1,5 +1,5 @@
 const router = createRouter({
-    history: createWebHistory('/'),
+    history: createWebHistory('/game-develop-template'),
     routes: [
         {
             path: '/',
