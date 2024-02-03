@@ -251,6 +251,15 @@ rules: [
 </details>
 
 <details open>
+  <summary><h2>🎑 静态资源修改</h2></summary>
+
+  1、修改 `src/assets` 中的游戏 `layout` 静态资源 `game-bg`。
+
+  2、修改 `public` 中的 `svg` 图标，并在 `index.html` 中同步修改。
+
+</details>
+
+<details open>
   <summary><h2>📝 待办任务模板</h2></summary>
 
 - [x] 任务 1
