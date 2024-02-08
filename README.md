@@ -1,6 +1,6 @@
 # 🧸 Web端游戏开发模板项目
 
-![game-code-font](./mdAssets/game-code-font.png)
+![game-font](./mdAssets/game-font.png)
 
 <details open>
   <summary><h2>🎮 项目介绍</h2></summary>
