@@ -1,4 +1,4 @@
-git# 🧸 Web端游戏开发模板项目
+# 🧸 Web端游戏开发模板项目
 
 <img alt="game-code-font" src="./mdAssets/game-code-font.png">
 
