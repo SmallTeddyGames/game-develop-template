@@ -3,17 +3,19 @@
 <img alt="game-code-font" src="./mdAssets/game-code-font.png">
 
 <details open>
-  <summary><h2>🎮 项目介绍</h2></summary>
-  
+
+<summary><h2>🎮 项目介绍</h2></summary>  
+
 ### 🪢 repo frame
   
-该项目致力于让所有前端开发者可以直接套用，在此基础上进行简单的前端游戏开发，项目使用了 `vue3` 作为主要开发框架，用 `vite` 工具构建。由于 `vue3` 框架全面支持了 `typescript` 语法，所以本项目也采用了 `typescript` 语言来替代 `javascript`。
+该项目致力于让所有前端开发者可以直接套用，在此基础上进行简单的前端游戏开发，项目使用了 `vue3` 作为主要开发框架，用 `vite` 工具构建。由于 `vue3` 框架全面支持了 `typescript` 语法，所以本项目也采用了 `typescript` 语言来替代 `javascript` 。
   
-使用 `vue-router` 来做路由管理，同时使用 `pnpm` 作为包管理工具，来替代 `npm` 和 `yarn`。
-  
+使用 `vue-router` 来做路由管理，同时使用 `pnpm` 作为包管理工具，来替代 `npm` 和 `yarn` 。
+
 ### 🎀 css config
+
   
-值得注意的是，该项目采用了大佬 `antfu` 的很多依赖工具，除了 `vite` 之外，还使用了原子化的 `css` 开发库 `unocss`， 如果想学习的小伙伴可以参考官网的开发文档：[UnoCss 官网](https://unocss.dev/)，如果想要查看一些 `css` 属性对应的语法转换，可以直接访问：[UnoCss 可视化配置](https://unocss.dev/interactive/)。
+值得注意的是，该项目采用了大佬 `antfu` 的很多依赖工具，除了 `vite` 之外，还使用了原子化的 `css` 开发库 `unocss` ， 如果想学习的小伙伴可以参考官网的开发文档：[UnoCss 官网](https://unocss.dev/)，如果想要查看一些 `css` 属性对应的语法转换，可以直接访问：[UnoCss 可视化配置](https://unocss.dev/interactive/)。
   
 并且本项目除了传统的 `flex` 布局之外，还使用了 `grid` 布局，如果对该布局不了解的小伙伴，也可以参考这个网站来进行了解和学习：[CssGrid 布局]( https://cssgrid-generator.netlify.app/)。
 
@@ -32,20 +34,21 @@
 项目中的 `eslint` 规范也同样采用了 `antfu` 的语法规范库 `@antfu/eslint-config` 的配置，如果有需要自定义个人 `eslint` 配置的可以直接在根目录下的 `eslint.config.ts` 替换个人配置，或者基于 [eslint 配置](https://github.com/antfu/eslint-config) 网站的配置上进行修改。
   
 ### 📎️ vueuse
+
   
 除了上面的一些工具外，还使用了常用的 `vueuse` 工具，值得注意的是，本项目没有使用 `pinia` 来做状态管理，而是使用了 `vueuse` 中的 `useGlobalState` 方法在本地来进行统一的状态管理。
 
 ### 💡 vscode setting
   
-除了上面的配置外，推荐直接根据项目的 `.vscode` 的 `extensions.json` 安装 `vscode` 插件，可以得到更好的开发效果。该配置仓库可参考：[vscode 配置](https://github.com/antfu/vscode-settings)。
-  
+除了上面的配置外，推荐直接根据项目的 `.vscode` 的 `extensions.json` 安装 `vscode` 插件，可以得到更好的开发效果。该配置仓库可参考：[vscode 配置](https://github.com/antfu/vscode-settings)。  
+
 ### 🛠️ gh-page
   
 在项目配置方面，使用了 `gh-pages` 工具来进行项目在 `github` 上的部署，用户可以直接访问 `https://<username>.github.io/<repo-name>` 来访问项目。部署的方式也很简单：
   
-- 1、创建一个部署的分支，个人习惯直接用 `deploy` 分支，名字根据个人爱好随意；
-- 2、修改 `deploy` 分支中路由的跟路径为 `<repo-name>`；
-  
+* 1、创建一个部署的分支，个人习惯直接用 `deploy` 分支，名字根据个人爱好随意；
+* 2、修改 `deploy` 分支中路由的跟路径为 `<repo-name>`；
+
 ```typescript
   // 修改前
   history: createWebHistory('/')
@@ -53,15 +56,20 @@
   // 修改后
   history: createWebHistory('/game-develop-template')
   ```
-  
-- 3、修改 `vite.config.ts` 配置，在 `defineConfig` 中增加 `base: './'` 属性；
-- 4、执行 `npm run develop` 命令，这个命令会先执行 `predeploy` 中的 `pnpm run build` 打包命令，之后会执行 `deploy` 的 `gh-pages -d dist`，第二个命令会将打包好的 `dist` 包上传到项目 `gh-pages` 分支中，之后 `github` 项目仓库中的 `Actions` 会配置该项目的 `Github Pages`，您可以在 `github` 项目仓库的 `Settings` 中的 `Pages` 选项卡中查看；
-  
+
+* 3、修改 `vite.config.ts` 配置，在 `defineConfig` 中增加 `base: './'` 属性；
+* 4、执行 `npm run develop` 命令，这个命令会先执行 `predeploy` 中的 `pnpm run build` 打包命令，之后会执行 `deploy` 的 `gh-pages -d dist`，第二个命令会将打包好的 `dist` 包上传到项目 `gh-pages` 分支中，之后 `github` 项目仓库中的 `Actions` 会配置该项目的 `Github Pages`，您可以在 `github` 项目仓库的 `Settings` 中的 `Pages` 选项卡中查看；
+
 ### 🖥️ niva construct
 
 项目中还使用了 `niva` 工具来构建进行构建桌面端项目，具体配置在 `niva.json` 中，您可以下载 niva 构建工具，根据您的需求，参照官网文档：[niva 官网](https://bramblex.github.io/niva/) 来对项目进行修改。
 
 当前项目构建仅修改了打包后的图标，您可以在 `public` 文件下替换 `game.png` 文件来修改打包后的图标，或者在 `niva.json` 中修改您自己图标资源路径来进行修改。
+
+`niva` 桌面端项目启动和打包介绍：
+
+* 1、桌面端项目调试，先 `npm run dev` 运行项目，之后在 `niva` 工具中点击 `调试`; 
+* 2、桌面端项目构建，先 `npm run build` 运行项目，之后在 `niva` 工具中点击 `构建`; 
 
 </details>
 
@@ -69,7 +77,7 @@
   <summary><h2>🚗 项目启动</h2></summary>
 
 ### 🎯 默认安装方式
-  
+
 ```bash
 # 安装依赖
 pnpm install
@@ -77,11 +85,11 @@ pnpm install
 # 启动项目
 pnpm run dev
 ```
-  
+
 ### 🎭 推荐使用工具
-  
+
 > 个人比较推荐 `antfu` 大佬的 `ni` 工具。地址为：[ni 工具](https://github.com/antfu/ni)
-  
+
 ```bash
 # 安装命令
 npm i -g @antfu/ni
@@ -92,16 +100,20 @@ ni
 # 启动项目
 nr
   ```
+
 </details>
 
 <details open>
-  <summary><h2>🌁 项目首页展示</h2></summary>
 
-  ![游戏布局界面](./mdAssets/game-layout.png)
+<summary><h2>🌁 项目首页展示</h2></summary>
+
+![游戏布局界面](./mdAssets/game-layout.png)
+
 </details>
 
 <details open>
-  <summary><h2>📋 项目目录介绍</h2></summary>
+
+<summary><h2>📋 项目目录介绍</h2></summary>
 
 ```bash
 game-develop-template
@@ -140,10 +152,12 @@ game-develop-template
 ├─ uno.config.ts # unocss配置
 └─ vite.config.ts # 开发配置
 ```
+
 </details>
 
 <details open>
-  <summary><h2>📦 项目开发配置说明</h2></summary>
+
+<summary><h2>📦 项目开发配置说明</h2></summary>
 
 ### 🚉 vue-router
 
@@ -153,7 +167,7 @@ game-develop-template
 
 ### ⛽ vueuse
 
-该项目采用 `vueuse` 做状态管理，状态配置在 `src/stores/index.ts`。
+该项目采用 `vueuse` 做状态管理，状态配置在 `src/stores/index.ts` 。
 
 ```typescript
 export const useGlobalState: () => Ref<GameInfoType> = createGlobalState(
@@ -180,7 +194,7 @@ export const useGlobalState: () => Ref<GameInfoType> = createGlobalState(
 
 ### 🔦 unplugin-auto-import
 
-该项目采用 `unplugin-auto-import` 来自动引入 `vue` 等相关 `API`。感兴趣的小伙伴可以参考该项目官网：
+该项目采用 `unplugin-auto-import` 来自动引入 `vue` 等相关 `API` 。感兴趣的小伙伴可以参考该项目官网：
 [unplugin-auto-import 官网](https://github.com/antfu/unplugin-auto-import)。
 
 本项目对 `unplugin-auto-import` 进行了配置，配置文件在 `vite.config.ts` 中，具体如下：
@@ -228,7 +242,7 @@ export default defineConfig({
 
 ### 🎀 uno-css
 
-项目使用了 `uno-css` 作为样式库，具体配置在 `uno.config.ts` 中，主要配置了 `shortcuts`、`rules`、`global`、`preflight` 等。
+项目使用了 `uno-css` 作为样式库，具体配置在 `uno.config.ts` 中，主要配置了 `shortcuts` 、 `rules` 、 `global` 、 `preflight` 等。
 
 其中，您可以通过配置 `shortcuts` 中的属性，来自定义样式配置。
 
@@ -279,29 +293,36 @@ export default i18n
 ### 🔧 utils
 
 项目提供了几个简单的工具函数：
-- 1、获取 `assets` 静态资源路径的函数 `getAssetsFile`;
-- 2、根据最大数字生成随机数的函数 `getRandomNumber`；
-- 3、深拷贝函数 `deepClone`；
-- 4、防抖函数 `debounce`
-- 5、节流函数 `throttle`
-</details>
-
-<details open>
-  <summary><h2>🎑 静态资源修改</h2></summary>
-
-  1、修改 `src/assets` 中的游戏 `layout` 静态资源 `game-bg`。
-
-  2、修改 `public` 中的 `svg` 图标，并在 `index.html` 中同步修改。
+* 1、获取 `assets` 静态资源路径的函数 `getAssetsFile`; 
+* 2、根据最大数字生成随机数的函数 `getRandomNumber`；
+* 3、深拷贝函数 `deepClone`；
+* 4、防抖函数 `debounce`
+* 5、节流函数 `throttle`
 
 </details>
 
 <details open>
-  <summary><h2>📝 待办任务模板</h2></summary>
 
-- [x] 任务 1
-- [ ] 任务 2
-  - [ ] 子任务 2-1
-  - [ ] 子任务 2-2
-- [ ] 任务 3 (备注内容)
-- [x] 任务 4
+<summary><h2>🎑 静态资源修改</h2></summary>
+
+### web 端配置修改
+  - 1、修改 `src/assets` 中的游戏 `layout` 静态资源 `game-bg`。
+  - 2、修改 `public` 中的 `svg` 图标，并在 `index.html` 中同步修改。
+
+### 桌面端配置修改
+  - 1、修改 `src/assets` 中 `game.png`。
+  - 2、如果要自定义打包后 `icons`，修改 `niva.json` 中 `icon` 配置。
+
+</details>
+
+<details open>
+
+<summary><h2>📝 待办任务模板</h2></summary>
+
+* [x] 任务 1
+* [ ] 任务 2
+  + [ ] 子任务 2-1
+  + [ ] 子任务 2-2
+* [ ] 任务 3 (备注内容)
+* [x] 任务 4
 </details>
