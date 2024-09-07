@@ -1,0 +1,12 @@
+{
+  "name": "game-develop-template",
+  "uuid": "20b5748a-dfd3-42fb-b490-7f6ab2cffc8e",
+  "icon": "./game.png",
+  "debug": {
+    "entry": "http://localhost:5173",
+    "resource": "public"
+  },
+  "build": {
+    "resource": "dist"
+  }
+}
